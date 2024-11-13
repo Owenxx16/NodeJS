@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Home Page</title>
+</head>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  .table-content{
+    padding: 15px 20px;
+  }
+  .title{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+  }
+  tr:hover {background-color: #ccc;}
+  </style>
+<body>
+  
+  <div.header>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/create">Create User</a></li>
+    </ul>
+  </div.header>
+  <div class="table-content">
+    <div class="title">List User</div>
+  </div>
+  <table class="table-content">
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>Action</th>
+    </tr>
+    <% for(let i = 0 ; i < listUser.length; i++){ %>
+    <tr>
+      <td><%= listUser[i].id %></td>
+      <td><%= listUser[i].email %></td>
+      <td><%= listUser[i].name %></td>
+      <td><%= listUser[i].city %></td>
+      <td>
+        <button>Edit</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+    <% } %>
+  </table>
+</body>
+</html>
